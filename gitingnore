@@ -1,0 +1,44 @@
+# -------------------------
+#  Ignorer fichiers Python
+# -------------------------
+__pycache__/          
+*.pyc                
+*.pyo
+*.pyd
+
+# -------------------------
+#  Environnements locaux
+# -------------------------
+venv/                
+.env                 
+*.db                  
+
+# -------------------------
+#  Fichiers système / IDE
+# -------------------------
+.vscode/              
+.idea/               
+.DS_Store            
+Thumbs.db             
+# -------------------------
+#  Logs et fichiers temporaires
+# -------------------------
+logs/                
+*.log
+tmp/
+*.tmp
+
+# -------------------------
+#  Spark & Airflow
+# -------------------------
+spark-warehouse/      
+metastore_db/
+checkpoint/           
+checkpoints/
+airflow_home/
+
+# -------------------------
+#  Docker
+# -------------------------
+*.pid
+*.sock
