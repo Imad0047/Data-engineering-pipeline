@@ -9,7 +9,7 @@ This project serves as a comprehensive guide to building an end-to-end data engi
 ![System Architecture](./images/architecture.png)
 
 ⚙️ Component Description
-    1 .BikePoint API 🛰️
+    1. BikePoint API 🛰️
       External data source providing information about bike stations.
       Delivers raw data through HTTP API requests.
     2. Apache Airflow 🪶
@@ -32,14 +32,14 @@ This project serves as a comprehensive guide to building an end-to-end data engi
 
 # Technologies
 
-  Apache Airflow
-  Python
-  Apache Kafka
-  Apache Zookeeper
-  Apache Spark
-  Cassandra
-  PostgreSQL
-  Docker
+  *Apache Airflow
+  *Python
+  *Apache Kafka
+  *Apache Zookeeper
+  *Apache Spark
+  *Cassandra
+  *PostgreSQL
+  *Docker
 
 # Getting Started
 
