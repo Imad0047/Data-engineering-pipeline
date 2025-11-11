@@ -41,7 +41,50 @@ This project serves as a comprehensive guide to building an end-to-end data engi
   * PostgreSQL
   * Docker
 
-# Getting Started
+# 🚀 Getting Started
+
+## 1️⃣ Clone the repository
+```bash
+git clone https://github.com/Imad0047/Data-engineering-pipeline.git
+```
+
+## 2️⃣ Navigate to the project directory
+```bash
+cd Data-engineering-pipeline
+```
+
+## 3️⃣ Run Docker Compose
+```bash
+docker-compose up -d
+```
+
+## 4️⃣ Access Airflow & launch the DAG
+Open Airflow in your browser:  
+👉 [http://localhost:8080](http://localhost:8080)
+
+**Default credentials (if configured in docker-compose):**
+```bash
+username: admin
+password: admin
+```
+
+## 5️⃣ Run the Spark Streaming job (inside the Spark container)
+```bash
+docker exec -it spark-master bash
+/opt/spark/bin/spark-submit \
+  --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,com.datastax.spark:spark-cassandra-connector_2.12:3.5.0 \
+  /opt/spark/work-dir/spark_stream.py
+```
+
+## 6️⃣ Verify data in Cassandra
+```bash
+docker exec -it cassandra cqlsh
+USE spark_streams;
+SELECT COUNT(*) FROM created_users;
+SELECT * FROM created_users LIMIT 5;
+```
+
+
 
      
       
